@@ -13,6 +13,6 @@ jobs:
 
     Deploy:
         needs: test
-        uses: ./.github/worflows/Resuable-workflow.yml
+        uses: ./.github/workflows/Reusable-workflow.yml
 
-        
+
