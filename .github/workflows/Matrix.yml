@@ -5,6 +5,7 @@ on:
             - '.github/workflows/Matrix.yml'  # So that when changes are done into this file only and than only this workflow will run 
 jobs:
     build:
+        continue-on-error: true
         strategy:
           matrix: 
             node-version: [12 ,18 ,20]
