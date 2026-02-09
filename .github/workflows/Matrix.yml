@@ -1,8 +1,8 @@
 name: Matrix Demo
 on: 
-    push:
-        paths:
-            - '.github/workflows/Matrix.yml'  # So that when changes are done into this file only and than only this workflow will run 
+  push:
+    paths:
+        - '.github/workflows/Matrix.yml'  # So that when changes are done into this file only and than only this workflow will run 
 jobs:
     build:
         continue-on-error: true
