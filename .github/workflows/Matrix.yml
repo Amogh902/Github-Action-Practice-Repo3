@@ -11,6 +11,14 @@ jobs:
             node-version: [12 ,18 ,20]
             os-version: [ubuntu-latest , windows-latest]
 
+            include:
+                - node-version: 16
+                  os-version: unbuntu-lates
+            
+            exclude:
+                - node-version: 12
+                  os-version: windows-latest
+
         runs-on: ${{ matrix.os-version }}
         steps:
             - name: Get node
