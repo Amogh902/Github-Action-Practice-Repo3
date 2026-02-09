@@ -13,7 +13,7 @@ jobs:
 
             include:
                 - node-version: 16
-                  os-version: unbuntu-lates
+                  os-version: unbuntu-latest
             
             exclude:
                 - node-version: 12
