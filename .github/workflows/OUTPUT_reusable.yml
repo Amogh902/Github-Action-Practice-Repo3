@@ -15,4 +15,4 @@ jobs:
       - name: Get output
         id: produce
         run: |
-          echo "step-output = 12 " >> $GITHUB_OUTPUT
+          echo "step-output=12" >> $GITHUB_OUTPUT
