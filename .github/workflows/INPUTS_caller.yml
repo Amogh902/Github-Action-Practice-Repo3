@@ -4,10 +4,18 @@ on: push
 
 jobs:
     call:
-        runs-on: ubuntu-latest
-        steps:
-            - name: sending inputs to the INPUT_reusable.yml file
-              uses: ./.github/workflows/INPUTS_reusable.yml
-              with:
-                message: "Hello from Amogh"
+        # runs-on: ubuntu-latest
+        # steps:
+        #     - name: sending inputs to the INPUT_reusable.yml file
+            uses: ./.github/workflows/INPUTS_reusable.yml
+            with:
+              message: "Hello from Amogh"
 
+# The Key Mistake
+# You wrote uses: in a place where GitHub expects a step.
+# When uses: is written inside steps:, GitHub thinks:
+# “Oh, this must be a local action.”
+# Local actions must have:
+# action.yml OR
+# Dockerfile
+# Your reusable workflow has neither, so GitHub threw an error.
