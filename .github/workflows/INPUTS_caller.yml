@@ -7,10 +7,15 @@ jobs:
         # runs-on: ubuntu-latest
         # steps:
         #     - name: sending inputs to the INPUT_reusable.yml file
-            uses: ./.github/workflows/INPUTS_reusable.yml
-            with:
-              message: "Hello from Amogh"
+        uses: ./.github/workflows/INPUTS_reusable.yml
+        with:
+            message: "Hello from Amogh"
+        
+        # secrets:
+            # MY_secret: ${{ secrets.<secret-id> }}
 
+
+              
 # The Key Mistake
 # You wrote uses: in a place where GitHub expects a step.
 # When uses: is written inside steps:, GitHub thinks:

@@ -6,6 +6,12 @@ on:
               required: true
               type: string
 
+    #   secrets:
+    #       MY_secret: 
+    #         required: false
+
+    
+
 jobs:
   show:
       runs-on: ubuntu-latest
