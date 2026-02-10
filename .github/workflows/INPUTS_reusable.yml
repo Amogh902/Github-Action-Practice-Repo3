@@ -1,0 +1,16 @@
+name: Reusable Workflow
+on:
+  workflow_call:
+      inputs:
+          message:             # id of input can be anything 
+              required: true
+              type: string
+
+jobs:
+  show:
+      runs-on: ubuntu-latest
+      steps:
+          - name: Takes INPUT Values
+            run: |
+              echo "Message is : ${{ inputs.message }}"
+            
