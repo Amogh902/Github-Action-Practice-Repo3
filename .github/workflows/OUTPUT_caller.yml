@@ -1,0 +1,19 @@
+name: output caller workflow
+
+on: push
+
+jobs:
+
+  map-reusable-workflow:
+    uses: ./.github/workflows/OUTPUT_reusable.yml
+
+  using-output-from-reusable-workflow:
+    needs: map-reusable-workflow
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print the output 
+        run: |
+          echo ${{ needs.map-reusable-workflow.outputs.workflow-output }}
+
+
+
